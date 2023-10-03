@@ -1,0 +1,68 @@
+### GET ALL
+
+GET http://localhost:8080/mariage/all
+#On a pas besoin de s'authentifier
+
+### GET BY ID
+
+GET http://localhost:8080/mariage/find/1
+#On a pas besoin de s'authentifier
+
+### ADD
+
+POST http://localhost:8080/mariage/add
+Content-Type: application/json
+#On a pas besoin de s'authentifier
+
+{
+  "date": "2023-01-01",
+  "nombreMinimumTemoin": 10,
+  "capaciteMinimal": 10,
+  "nombreMaxInviteEpoux": 10
+}
+
+### UPDATE
+
+PUT http://localhost:8080/mariage/update
+Content-Type: application/json
+#On a pas besoin de s'authentifier
+
+{
+  "numero": 1,
+  "date": "2023-01-02",
+  "nombreMinimumTemoin": 20,
+  "capaciteMinimal": 20,
+  "nombreMaxInviteEpoux": 20
+}
+
+### DELETE
+
+DELETE http://localhost:8080/mariage/delete/1
+Content-Type: application/json
+#On a pas besoin de s'authentifier
+
+### QRINVITATION1
+
+POST http://localhost:8080/mariage/qrinvitation?mariageNumero=1
+Content-Type: application/json
+Authorization: Basic admin password
+
+{
+  "cin": "123456",
+  "nom": "LAAMOUMRI",
+  "prenom": "Souhail",
+  "statut": "TEMOIN"
+}
+
+### QRINVITATION2
+
+POST http://localhost:8080/mariage/qrinvitation?mariageNumero=1
+Content-Type: application/json
+Authorization: Basic admin password
+
+{
+  "cin": "123456",
+  "nom": "BETTAOUI",
+  "prenom": "Saif",
+  "statut": "TEMOIN"
+}

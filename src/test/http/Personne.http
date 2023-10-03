@@ -1,0 +1,76 @@
+### GET ALL
+
+GET http://localhost:8080/personne/all
+#On a pas besoin de s'authentifier
+
+### GET BY ID
+
+GET http://localhost:8080/personne/find/1
+
+### ADD HOMME
+
+POST http://localhost:8080/personne/add
+Content-Type: application/json
+
+{
+  "cin": "FA199027",
+  "nom": "Fajoui",
+  "prenom": "Anas"
+
+}
+
+### ADD FEMME
+
+POST http://localhost:8080/personne/add
+Content-Type: application/json
+
+{
+  "cin": "FA12304",
+  "nom": "idk",
+  "prenom": "Meryeme"
+
+}
+
+### UPDATE
+
+PUT http://localhost:8080/personne/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "cin": "FA199027",
+  "nom": "FAJOUI",
+  "prenom": "Anas"
+
+}
+
+### DELETE
+
+DELETE http://localhost:8080/personne/delete/1
+Content-Type: application/json
+
+### RESERVER
+
+POST http://localhost:8080/personne/reserver?hommeId=1&femmeId=2
+Content-Type: application/json
+Authorization: Basic user password
+
+{
+  "date": "2023-02-14",
+  "nombreMinimumTemoin": 10,
+  "capaciteMinimal": 10,
+  "nombreMaxInviteEpoux": 10
+}
+
+### CONFIRMER
+
+POST http://localhost:8080/personne/confirmer?mariageNumero=1
+Content-Type: application/json
+Authorization: Basic user password
+
+{
+  "nom": "Salle Anas et Meryeme",
+  "adresse": "Berkane adrese",
+  "ville": "Berkane",
+  "capacite": 100
+}

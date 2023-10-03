@@ -1,0 +1,43 @@
+### GET ALL
+
+GET http://localhost:8080/invite/all
+#On a pas besoin de s'authentifier
+
+### GET BY ID
+
+GET http://localhost:8080/invite/find/1
+#On a pas besoin de s'authentifier
+
+### ADD
+
+POST http://localhost:8080/invite/add
+Content-Type: application/json
+#On a pas besoin de s'authentifier
+
+{
+  "cin": "123",
+  "nom": "test",
+  "prenom": "test",
+  "statut": "TEMOIN"
+}
+
+### UPDATE
+
+PUT http://localhost:8080/invite/update
+Content-Type: application/json
+#On a pas besoin de s'authentifier
+
+{
+  "id": 1,
+  "cin": "hehe",
+  "nom": "hehe",
+  "prenom": "hehe",
+  "statut": "INVITE_EPOUSE"
+
+}
+
+### DELETE
+
+DELETE http://localhost:8080/invite/delete/1
+Content-Type: application/json
+#On a pas besoin de s'authentifier

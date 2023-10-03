@@ -1,0 +1,42 @@
+### GET ALL
+
+GET http://localhost:8080/salle/all
+#Authorization: Basic user password
+
+### GET BY ID
+
+GET http://localhost:8080/salle/find/1
+#Authorization: Basic user password
+
+### ADD
+
+POST http://localhost:8080/salle/add
+Content-Type: application/json
+#Authorization: Basic user password
+
+{
+  "nom": "Salle Anas",
+  "adresse": "Berkane",
+  "ville": "Berkane",
+  "capacite": 100
+}
+
+### UPDATE
+
+PUT http://localhost:8080/salle/update
+Content-Type: application/json
+#Authorization: Basic user password
+
+{
+  "id": 1,
+  "nom": "Salle Anas",
+  "adresse": "Berkane",
+  "ville": "Berkane",
+  "capacite": 222
+}
+
+### DELETE
+
+DELETE http://localhost:8080/salle/delete/1
+Content-Type: application/json
+#Authorization: Basic user password
